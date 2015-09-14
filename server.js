@@ -5,9 +5,9 @@ var request = require('request');
 var app = express();
 
 var secret = fs.readFileSync('secret.txt','utf8');
-console.log(secret);
-var user = secret.split(' ')[0].trim();
-var password = secret.split(' ')[1].trim();
+//console.log(secret);
+var user = process.env.USER || secret.split(' ')[0].trim();
+var password = process.env.PASSWORD || secret.split(' ')[1].trim();
 console.log(user);
 console.log(password);
 
