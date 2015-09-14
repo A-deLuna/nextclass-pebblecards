@@ -61,7 +61,7 @@ function getNextClass(schedule){
   if(!courseWeek[day][i]){
     day = (day + 1) & 7;
   }
-  while(hour > courseWeek[day][i].hour) {
+  while(hour >= courseWeek[day][i].hour) {
     console.log("next " + courseWeek[day][i].hour + " day " + day);
     i++;
     if(!courseWeek[day][i]){
